@@ -29,38 +29,44 @@
         private void InitializeComponent()
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(driverForm));
-            this.TopHeader = new GradientPanelDemo.GradientPanel();
-            this.footerBottom = new GradientPanelDemo.GradientPanel();
             this.Header = new System.Windows.Forms.Panel();
             this.customImageButton1 = new food_Delivery_v_0._0.CustomImageButton();
             this.label2 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
             this.customImageButton2 = new food_Delivery_v_0._0.CustomImageButton();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.ordersCombobox = new System.Windows.Forms.ComboBox();
+            this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.quantityTxt = new System.Windows.Forms.TextBox();
+            this.orderDetailsTxt = new System.Windows.Forms.TextBox();
+            this.mealNameTxt = new System.Windows.Forms.TextBox();
+            this.cookTxt = new System.Windows.Forms.TextBox();
+            this.customerTxt = new System.Windows.Forms.TextBox();
+            this.orderDetailsLabel = new System.Windows.Forms.Label();
+            this.quantityLabel = new System.Windows.Forms.Label();
+            this.mealNameLabel = new System.Windows.Forms.Label();
+            this.cookLabel = new System.Windows.Forms.Label();
+            this.customerLabel = new System.Windows.Forms.Label();
+            this.deliverOrderButton = new System.Windows.Forms.Button();
+            this.footerBottom = new GradientPanelDemo.GradientPanel();
+            this.TopHeader = new GradientPanelDemo.GradientPanel();
             this.elipseControl1 = new ElipseToolDemo.ElipseControl();
+            this.groupBox2 = new System.Windows.Forms.GroupBox();
+            this.addressTxt = new System.Windows.Forms.TextBox();
+            this.phoneTxt = new System.Windows.Forms.TextBox();
+            this.gendertxt = new System.Windows.Forms.TextBox();
+            this.customerFullNametxt = new System.Windows.Forms.TextBox();
+            this.label1 = new System.Windows.Forms.Label();
+            this.label5 = new System.Windows.Forms.Label();
+            this.label6 = new System.Windows.Forms.Label();
+            this.label7 = new System.Windows.Forms.Label();
             this.Header.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.customImageButton1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.customImageButton2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
+            this.groupBox1.SuspendLayout();
+            this.groupBox2.SuspendLayout();
             this.SuspendLayout();
-            // 
-            // TopHeader
-            // 
-            this.TopHeader.ColorBottom = System.Drawing.Color.Chocolate;
-            this.TopHeader.ColorTop = System.Drawing.Color.SaddleBrown;
-            this.TopHeader.Location = new System.Drawing.Point(0, 0);
-            this.TopHeader.Name = "TopHeader";
-            this.TopHeader.Size = new System.Drawing.Size(824, 17);
-            this.TopHeader.TabIndex = 6;
-            // 
-            // footerBottom
-            // 
-            this.footerBottom.ColorBottom = System.Drawing.Color.Chocolate;
-            this.footerBottom.ColorTop = System.Drawing.Color.SaddleBrown;
-            this.footerBottom.Location = new System.Drawing.Point(0, 547);
-            this.footerBottom.Name = "footerBottom";
-            this.footerBottom.Size = new System.Drawing.Size(837, 18);
-            this.footerBottom.TabIndex = 7;
             // 
             // Header
             // 
@@ -72,7 +78,7 @@
             this.Header.Controls.Add(this.pictureBox1);
             this.Header.Location = new System.Drawing.Point(0, 16);
             this.Header.Name = "Header";
-            this.Header.Size = new System.Drawing.Size(837, 98);
+            this.Header.Size = new System.Drawing.Size(878, 98);
             this.Header.TabIndex = 8;
             // 
             // customImageButton1
@@ -137,10 +143,240 @@
             this.pictureBox1.TabIndex = 3;
             this.pictureBox1.TabStop = false;
             // 
+            // ordersCombobox
+            // 
+            this.ordersCombobox.FormattingEnabled = true;
+            this.ordersCombobox.Location = new System.Drawing.Point(121, 155);
+            this.ordersCombobox.Margin = new System.Windows.Forms.Padding(2);
+            this.ordersCombobox.Name = "ordersCombobox";
+            this.ordersCombobox.Size = new System.Drawing.Size(137, 21);
+            this.ordersCombobox.TabIndex = 9;
+            this.ordersCombobox.Text = "Orders";
+            this.ordersCombobox.SelectionChangeCommitted += new System.EventHandler(this.ordersCombobox_SelectionChangeCommitted);
+            // 
+            // groupBox1
+            // 
+            this.groupBox1.BackColor = System.Drawing.SystemColors.Control;
+            this.groupBox1.Controls.Add(this.quantityTxt);
+            this.groupBox1.Controls.Add(this.orderDetailsTxt);
+            this.groupBox1.Controls.Add(this.mealNameTxt);
+            this.groupBox1.Controls.Add(this.cookTxt);
+            this.groupBox1.Controls.Add(this.customerTxt);
+            this.groupBox1.Controls.Add(this.orderDetailsLabel);
+            this.groupBox1.Controls.Add(this.quantityLabel);
+            this.groupBox1.Controls.Add(this.mealNameLabel);
+            this.groupBox1.Controls.Add(this.cookLabel);
+            this.groupBox1.Controls.Add(this.customerLabel);
+            this.groupBox1.Location = new System.Drawing.Point(40, 201);
+            this.groupBox1.Name = "groupBox1";
+            this.groupBox1.Size = new System.Drawing.Size(368, 206);
+            this.groupBox1.TabIndex = 10;
+            this.groupBox1.TabStop = false;
+            this.groupBox1.Text = "Order Details";
+            // 
+            // quantityTxt
+            // 
+            this.quantityTxt.Location = new System.Drawing.Point(139, 164);
+            this.quantityTxt.Name = "quantityTxt";
+            this.quantityTxt.Size = new System.Drawing.Size(213, 20);
+            this.quantityTxt.TabIndex = 9;
+            // 
+            // orderDetailsTxt
+            // 
+            this.orderDetailsTxt.Location = new System.Drawing.Point(139, 128);
+            this.orderDetailsTxt.Name = "orderDetailsTxt";
+            this.orderDetailsTxt.Size = new System.Drawing.Size(213, 20);
+            this.orderDetailsTxt.TabIndex = 8;
+            // 
+            // mealNameTxt
+            // 
+            this.mealNameTxt.Location = new System.Drawing.Point(139, 96);
+            this.mealNameTxt.Name = "mealNameTxt";
+            this.mealNameTxt.Size = new System.Drawing.Size(213, 20);
+            this.mealNameTxt.TabIndex = 7;
+            // 
+            // cookTxt
+            // 
+            this.cookTxt.Location = new System.Drawing.Point(139, 62);
+            this.cookTxt.Name = "cookTxt";
+            this.cookTxt.Size = new System.Drawing.Size(213, 20);
+            this.cookTxt.TabIndex = 6;
+            // 
+            // customerTxt
+            // 
+            this.customerTxt.Location = new System.Drawing.Point(139, 28);
+            this.customerTxt.Name = "customerTxt";
+            this.customerTxt.Size = new System.Drawing.Size(213, 20);
+            this.customerTxt.TabIndex = 5;
+            // 
+            // orderDetailsLabel
+            // 
+            this.orderDetailsLabel.AutoSize = true;
+            this.orderDetailsLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.orderDetailsLabel.Location = new System.Drawing.Point(6, 128);
+            this.orderDetailsLabel.Name = "orderDetailsLabel";
+            this.orderDetailsLabel.Size = new System.Drawing.Size(119, 24);
+            this.orderDetailsLabel.TabIndex = 4;
+            this.orderDetailsLabel.Text = "Order Details";
+            // 
+            // quantityLabel
+            // 
+            this.quantityLabel.AutoSize = true;
+            this.quantityLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.quantityLabel.Location = new System.Drawing.Point(6, 164);
+            this.quantityLabel.Name = "quantityLabel";
+            this.quantityLabel.Size = new System.Drawing.Size(83, 24);
+            this.quantityLabel.TabIndex = 3;
+            this.quantityLabel.Text = "Quantity:";
+            // 
+            // mealNameLabel
+            // 
+            this.mealNameLabel.AutoSize = true;
+            this.mealNameLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.mealNameLabel.Location = new System.Drawing.Point(6, 92);
+            this.mealNameLabel.Name = "mealNameLabel";
+            this.mealNameLabel.Size = new System.Drawing.Size(112, 24);
+            this.mealNameLabel.TabIndex = 2;
+            this.mealNameLabel.Text = "Meal Name:";
+            // 
+            // cookLabel
+            // 
+            this.cookLabel.AutoSize = true;
+            this.cookLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.cookLabel.Location = new System.Drawing.Point(6, 58);
+            this.cookLabel.Name = "cookLabel";
+            this.cookLabel.Size = new System.Drawing.Size(59, 24);
+            this.cookLabel.TabIndex = 1;
+            this.cookLabel.Text = "Cook:";
+            // 
+            // customerLabel
+            // 
+            this.customerLabel.AutoSize = true;
+            this.customerLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.customerLabel.Location = new System.Drawing.Point(6, 25);
+            this.customerLabel.Name = "customerLabel";
+            this.customerLabel.Size = new System.Drawing.Size(96, 24);
+            this.customerLabel.TabIndex = 0;
+            this.customerLabel.Text = "Customer:";
+            // 
+            // deliverOrderButton
+            // 
+            this.deliverOrderButton.Location = new System.Drawing.Point(304, 429);
+            this.deliverOrderButton.Name = "deliverOrderButton";
+            this.deliverOrderButton.Size = new System.Drawing.Size(169, 51);
+            this.deliverOrderButton.TabIndex = 11;
+            this.deliverOrderButton.Text = "Deliver Order";
+            this.deliverOrderButton.UseVisualStyleBackColor = true;
+            this.deliverOrderButton.Click += new System.EventHandler(this.deliverOrderButton_Click);
+            // 
+            // footerBottom
+            // 
+            this.footerBottom.ColorBottom = System.Drawing.Color.Chocolate;
+            this.footerBottom.ColorTop = System.Drawing.Color.SaddleBrown;
+            this.footerBottom.Location = new System.Drawing.Point(12, 583);
+            this.footerBottom.Name = "footerBottom";
+            this.footerBottom.Size = new System.Drawing.Size(891, 26);
+            this.footerBottom.TabIndex = 7;
+            // 
+            // TopHeader
+            // 
+            this.TopHeader.ColorBottom = System.Drawing.Color.Chocolate;
+            this.TopHeader.ColorTop = System.Drawing.Color.SaddleBrown;
+            this.TopHeader.Location = new System.Drawing.Point(0, 0);
+            this.TopHeader.Name = "TopHeader";
+            this.TopHeader.Size = new System.Drawing.Size(961, 21);
+            this.TopHeader.TabIndex = 6;
+            // 
             // elipseControl1
             // 
             this.elipseControl1.CornerRadius = 100;
             this.elipseControl1.TargetControl = this;
+            // 
+            // groupBox2
+            // 
+            this.groupBox2.BackColor = System.Drawing.SystemColors.Control;
+            this.groupBox2.Controls.Add(this.addressTxt);
+            this.groupBox2.Controls.Add(this.phoneTxt);
+            this.groupBox2.Controls.Add(this.gendertxt);
+            this.groupBox2.Controls.Add(this.customerFullNametxt);
+            this.groupBox2.Controls.Add(this.label1);
+            this.groupBox2.Controls.Add(this.label5);
+            this.groupBox2.Controls.Add(this.label6);
+            this.groupBox2.Controls.Add(this.label7);
+            this.groupBox2.Location = new System.Drawing.Point(474, 226);
+            this.groupBox2.Name = "groupBox2";
+            this.groupBox2.Size = new System.Drawing.Size(368, 167);
+            this.groupBox2.TabIndex = 11;
+            this.groupBox2.TabStop = false;
+            this.groupBox2.Text = "Customer Details";
+            // 
+            // addressTxt
+            // 
+            this.addressTxt.Location = new System.Drawing.Point(139, 128);
+            this.addressTxt.Name = "addressTxt";
+            this.addressTxt.Size = new System.Drawing.Size(213, 20);
+            this.addressTxt.TabIndex = 8;
+            // 
+            // phoneTxt
+            // 
+            this.phoneTxt.Location = new System.Drawing.Point(139, 96);
+            this.phoneTxt.Name = "phoneTxt";
+            this.phoneTxt.Size = new System.Drawing.Size(213, 20);
+            this.phoneTxt.TabIndex = 7;
+            // 
+            // gendertxt
+            // 
+            this.gendertxt.Location = new System.Drawing.Point(139, 62);
+            this.gendertxt.Name = "gendertxt";
+            this.gendertxt.Size = new System.Drawing.Size(213, 20);
+            this.gendertxt.TabIndex = 6;
+            // 
+            // customerFullNametxt
+            // 
+            this.customerFullNametxt.Location = new System.Drawing.Point(139, 28);
+            this.customerFullNametxt.Name = "customerFullNametxt";
+            this.customerFullNametxt.Size = new System.Drawing.Size(213, 20);
+            this.customerFullNametxt.TabIndex = 5;
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.Location = new System.Drawing.Point(6, 128);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(85, 24);
+            this.label1.TabIndex = 4;
+            this.label1.Text = "Address:";
+            // 
+            // label5
+            // 
+            this.label5.AutoSize = true;
+            this.label5.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label5.Location = new System.Drawing.Point(6, 92);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(71, 24);
+            this.label5.TabIndex = 2;
+            this.label5.Text = "Phone:";
+            // 
+            // label6
+            // 
+            this.label6.AutoSize = true;
+            this.label6.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label6.Location = new System.Drawing.Point(6, 58);
+            this.label6.Name = "label6";
+            this.label6.Size = new System.Drawing.Size(79, 24);
+            this.label6.TabIndex = 1;
+            this.label6.Text = "Gender:";
+            // 
+            // label7
+            // 
+            this.label7.AutoSize = true;
+            this.label7.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label7.Location = new System.Drawing.Point(6, 25);
+            this.label7.Name = "label7";
+            this.label7.Size = new System.Drawing.Size(66, 24);
+            this.label7.TabIndex = 0;
+            this.label7.Text = "Name:";
             // 
             // driverForm
             // 
@@ -148,7 +384,11 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackgroundImage = global::food_Delivery_v_0._0.Properties.Resources._3;
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.ClientSize = new System.Drawing.Size(838, 565);
+            this.ClientSize = new System.Drawing.Size(854, 604);
+            this.Controls.Add(this.groupBox2);
+            this.Controls.Add(this.deliverOrderButton);
+            this.Controls.Add(this.groupBox1);
+            this.Controls.Add(this.ordersCombobox);
             this.Controls.Add(this.Header);
             this.Controls.Add(this.footerBottom);
             this.Controls.Add(this.TopHeader);
@@ -161,6 +401,10 @@
             ((System.ComponentModel.ISupportInitialize)(this.customImageButton1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.customImageButton2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
+            this.groupBox1.ResumeLayout(false);
+            this.groupBox1.PerformLayout();
+            this.groupBox2.ResumeLayout(false);
+            this.groupBox2.PerformLayout();
             this.ResumeLayout(false);
 
         }
@@ -176,5 +420,27 @@
         private CustomImageButton customImageButton2;
         private System.Windows.Forms.PictureBox pictureBox1;
         private ElipseToolDemo.ElipseControl elipseControl1;
+        private System.Windows.Forms.ComboBox ordersCombobox;
+        private System.Windows.Forms.GroupBox groupBox1;
+        private System.Windows.Forms.Label customerLabel;
+        private System.Windows.Forms.TextBox quantityTxt;
+        private System.Windows.Forms.TextBox orderDetailsTxt;
+        private System.Windows.Forms.TextBox mealNameTxt;
+        private System.Windows.Forms.TextBox cookTxt;
+        private System.Windows.Forms.TextBox customerTxt;
+        private System.Windows.Forms.Label orderDetailsLabel;
+        private System.Windows.Forms.Label quantityLabel;
+        private System.Windows.Forms.Label mealNameLabel;
+        private System.Windows.Forms.Label cookLabel;
+        private System.Windows.Forms.Button deliverOrderButton;
+        private System.Windows.Forms.GroupBox groupBox2;
+        private System.Windows.Forms.TextBox addressTxt;
+        private System.Windows.Forms.TextBox phoneTxt;
+        private System.Windows.Forms.TextBox gendertxt;
+        private System.Windows.Forms.TextBox customerFullNametxt;
+        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.Label label5;
+        private System.Windows.Forms.Label label6;
+        private System.Windows.Forms.Label label7;
     }
 }

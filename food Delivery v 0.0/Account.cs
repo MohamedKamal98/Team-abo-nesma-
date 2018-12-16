@@ -42,7 +42,7 @@ namespace food_Delivery_v_0._0
             }
             else if (Acc_Type == "Driver")
             {
-                cmd = new SqlCommand("insert into Driver(Username,FullName,Password,Civil_ID,Phone,Address,Gender) values('" + UserName + "', '" + FullName + "' ,'" + Password + "', '"+ Driver_CivilId +"' ,'" + PhoneNumber + "','" + Address + "','"+Gender+"')", con);
+                cmd = new SqlCommand("insert into Driver(Username,FullName,Password,Civil_ID,Phone,Address,Gender,isdriving) values('" + UserName + "', '" + FullName + "' ,'" + Password + "', '"+ Driver_CivilId +"' ,'" + PhoneNumber + "','" + Address + "','"+Gender+"',0)", con);
                 con.Open();
                 cmd.ExecuteNonQuery();
                 con.Close();
@@ -136,7 +136,7 @@ namespace food_Delivery_v_0._0
 
         public void done_request(string meal_id)
         {
-            cmd = new SqlCommand("UPDATE Menu set Checker_ID='"+SignInControl.checker_username+"',checked='"+1+"' delete from check_request where meal_id='" + Convert.ToInt32(meal_id) + "'", con);
+            cmd = new SqlCommand("UPDATE Menu set Checker_ID='"+SignInControl.checker_username+"',checked='"+1+ "' where meal_id='" + Convert.ToInt32(meal_id) + "' delete from check_request where meal_id='" + Convert.ToInt32(meal_id) + "'", con);
             con.Open();
             cmd.ExecuteNonQuery();
             con.Close();

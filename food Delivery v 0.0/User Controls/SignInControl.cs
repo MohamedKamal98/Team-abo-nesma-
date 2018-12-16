@@ -22,6 +22,7 @@ namespace food_Delivery_v_0._0
         string sqlTable = null; //to get the string of the table which data will be retrieved from
         public static string checker_username;
         public static string customerUsername;
+        public static string DriverUsername;
         public static string username;
         private void SignIn_bt_Click(object sender, EventArgs e)
         {
@@ -59,6 +60,7 @@ namespace food_Delivery_v_0._0
                             }
                             else if (sqlTable == "Driver")
                             {
+                                DriverUsername = usernametxt.Text; 
                                 driverForm df = new driverForm();
                                 df.Show();
                                 //the driver's options goes here
