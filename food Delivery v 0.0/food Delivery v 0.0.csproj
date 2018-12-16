@@ -1,0 +1,300 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="12.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{1E57F6CD-356F-4BB5-91A8-AF7EAD476F4C}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>food_Delivery_v_0._0</RootNamespace>
+    <AssemblyName>food Delivery v 0.0</AssemblyName>
+    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="AlphaBlendTextBox">
+      <HintPath>E:\New folder\AlphaBlendTextBox.dll</HintPath>
+    </Reference>
+    <Reference Include="Bunifu_UI_v1.52">
+      <HintPath>E:\New folder\Bunifu_UI_v1.52.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Management" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Account.cs" />
+    <Compile Include="AddMealForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AddMealForm.Designer.cs">
+      <DependentUpon>AddMealForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="AdminReviews.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="AdminReviews.designer.cs">
+      <DependentUpon>AdminReviews.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Admin_form.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Admin_form.Designer.cs">
+      <DependentUpon>Admin_form.cs</DependentUpon>
+    </Compile>
+    <Compile Include="checker_requests.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="checker_requests.Designer.cs">
+      <DependentUpon>checker_requests.cs</DependentUpon>
+    </Compile>
+    <Compile Include="DeleteMealForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="DeleteMealForm.Designer.cs">
+      <DependentUpon>DeleteMealForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="driverForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="driverForm.Designer.cs">
+      <DependentUpon>driverForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="customerForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="customerForm.Designer.cs">
+      <DependentUpon>customerForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="CookForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="CookForm.Designer.cs">
+      <DependentUpon>CookForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Cook_Menu.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Cook_Menu.Designer.cs">
+      <DependentUpon>Cook_Menu.cs</DependentUpon>
+    </Compile>
+    <Compile Include="EditMealForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="EditMealForm.Designer.cs">
+      <DependentUpon>EditMealForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="fire.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="fire.Designer.cs">
+      <DependentUpon>fire.cs</DependentUpon>
+    </Compile>
+    <Compile Include="checker_form.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="checker_form.Designer.cs">
+      <DependentUpon>checker_form.cs</DependentUpon>
+    </Compile>
+    <Compile Include="recordd.cs" />
+    <Compile Include="User Controls\AdminRequestToChecker.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="User Controls\AdminRequestToChecker.Designer.cs">
+      <DependentUpon>AdminRequestToChecker.cs</DependentUpon>
+    </Compile>
+    <Compile Include="User Controls\CircularButton.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="User Controls\CustomImageButton.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="User Controls\CustomImageButton.Designer.cs">
+      <DependentUpon>CustomImageButton.cs</DependentUpon>
+    </Compile>
+    <Compile Include="User Controls\DragControl.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="User Controls\ElipseControl.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="record_forall.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="record_forall.Designer.cs">
+      <DependentUpon>record_forall.cs</DependentUpon>
+    </Compile>
+    <Compile Include="User Controls\MakeorderUsercontrol.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="User Controls\MakeorderUsercontrol.Designer.cs">
+      <DependentUpon>MakeorderUsercontrol.cs</DependentUpon>
+    </Compile>
+    <Compile Include="User Controls\show_all.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="User Controls\show_all.Designer.cs">
+      <DependentUpon>show_all.cs</DependentUpon>
+    </Compile>
+    <Compile Include="User Controls\SignInControl.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="User Controls\SignInControl.Designer.cs">
+      <DependentUpon>SignInControl.cs</DependentUpon>
+    </Compile>
+    <Compile Include="User Controls\SignUpControl.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="User Controls\SignUpControl.Designer.cs">
+      <DependentUpon>SignUpControl.cs</DependentUpon>
+    </Compile>
+    <Compile Include="User Controls\TransparentControl.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="User Controls\TransparentControl.Designer.cs">
+      <DependentUpon>TransparentControl.cs</DependentUpon>
+    </Compile>
+    <Compile Include="WelcomeInterface.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="WelcomeInterface.Designer.cs">
+      <DependentUpon>WelcomeInterface.cs</DependentUpon>
+    </Compile>
+    <Compile Include="User Controls\GradientPanel.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="WinAPI.cs" />
+    <EmbeddedResource Include="AddMealForm.resx">
+      <DependentUpon>AddMealForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="AdminReviews.resx">
+      <DependentUpon>AdminReviews.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Admin_form.resx">
+      <DependentUpon>Admin_form.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="checker_requests.resx">
+      <DependentUpon>checker_requests.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="DeleteMealForm.resx">
+      <DependentUpon>DeleteMealForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="driverForm.resx">
+      <DependentUpon>driverForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="customerForm.resx">
+      <DependentUpon>customerForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="CookForm.resx">
+      <DependentUpon>CookForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Cook_Menu.resx">
+      <DependentUpon>Cook_Menu.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="EditMealForm.resx">
+      <DependentUpon>EditMealForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="fire.resx">
+      <DependentUpon>fire.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="checker_form.resx">
+      <DependentUpon>checker_form.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="User Controls\AdminRequestToChecker.resx">
+      <DependentUpon>AdminRequestToChecker.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="User Controls\CustomImageButton.resx">
+      <DependentUpon>CustomImageButton.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="record_forall.resx">
+      <DependentUpon>record_forall.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="User Controls\MakeorderUsercontrol.resx">
+      <DependentUpon>MakeorderUsercontrol.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="User Controls\show_all.resx">
+      <DependentUpon>show_all.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="User Controls\SignInControl.resx">
+      <DependentUpon>SignInControl.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="User Controls\SignUpControl.resx">
+      <DependentUpon>SignUpControl.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="User Controls\TransparentControl.resx">
+      <DependentUpon>TransparentControl.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="WelcomeInterface.resx">
+      <DependentUpon>WelcomeInterface.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="bin\Debug\Images\3.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Logout-512.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\download.png" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>
