@@ -191,6 +191,8 @@ namespace food_Delivery_v_0._0
 
         private void checkoutButton_Click(object sender, EventArgs e)
         {
+            string date = DateTime.Now.Month.ToString() + DateTime.Now.Minute.ToString() + DateTime.Now.Day.ToString() + DateTime.Now.Second.ToString();
+            MessageBox.Show(date);
             try
             {
                 int rowsNum = OrderDataGridView.Rows.Count;
@@ -203,7 +205,7 @@ namespace food_Delivery_v_0._0
                     string mealname = selectedRow.Cells[0].Value.ToString();
                     string CookUsername = selectedRow.Cells[1].Value.ToString();
                     int quantity = Int32.Parse(selectedRow.Cells[2].Value.ToString());
-                    user.cmd = new System.Data.SqlClient.SqlCommand("insert into Order_Record(meal_id, MealName, CookUsername, quantity, CustomerUsername) values('" + mealId + "','" + mealname + "','" + CookUsername + "','" + quantity + "','" + CustomerUsername + "')", user.con);
+                    user.cmd = new System.Data.SqlClient.SqlCommand("insert into Order_Record(meal_id, MealName, CookUsername, quantity, CustomerUsername, driverUsername, isDelivered, isPrepared, serial) values('" + mealId + "','" + mealname + "','" + CookUsername + "','" + quantity + "','" + CustomerUsername + "' , 'no driver' , 0, 0, '" + date + "')", user.con);
                     user.con.Open();
                     user.cmd.ExecuteNonQuery();
                     user.con.Close();

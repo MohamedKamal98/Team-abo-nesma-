@@ -20,14 +20,14 @@ namespace food_Delivery_v_0._0
             InitializeComponent();
 
             user.con.Open();
-            SqlCommand cmd = new SqlCommand("select Order_id from Order_Record", user.con);
+            SqlCommand cmd = new SqlCommand("select serial from Order_Record where driverUsername = 'no driver'", user.con);
             SqlDataReader dataReader = cmd.ExecuteReader();
 
             if (dataReader.HasRows)
             {
                 while (dataReader.Read())
                 {
-                    ordersCombobox.Items.Add(dataReader.GetInt32(0));
+                    ordersCombobox.Items.Add(dataReader.GetString(0));
                 }
             }
             dataReader.Close();
@@ -52,24 +52,26 @@ namespace food_Delivery_v_0._0
                 Application.Exit();
         }
 
+        public string serial;
         private void ordersCombobox_SelectionChangeCommitted(object sender, EventArgs e)
         {
             
             string orderId = ordersCombobox.SelectedItem.ToString();
+            serial = orderId;
             user.con.Open();
-            SqlCommand cmd = new SqlCommand("select CustomerUsername,CookUsername,Order_Details,MealName,quantity from Order_Record where Order_id = '" + orderId + "'", user.con);
+            SqlCommand cmd = new SqlCommand("select CustomerUsername,CookUsername,MealName,quantity from Order_Record where serial = '" + serial + "'", user.con);
             SqlDataReader dr = cmd.ExecuteReader();
             if (dr.HasRows)
             {
                 dr.Read();
                  Customer = dr.GetString(0);
                 string Cook = dr.GetString(1);
-                string Order_Details = dr.GetString(2);
-                string MealName = dr.GetString(3);
-                int quantity = Int32.Parse(dr.GetString(4));
+                //string Order_Details = dr.GetString(2);
+                string MealName = dr.GetString(2);
+                int quantity = dr.GetInt32(3);
                 customerTxt.Text = Customer;
                 cookTxt.Text = Cook;
-                orderDetailsTxt.Text = Order_Details;
+                //orderDetailsTxt.Text = Order_Details;
                 mealNameTxt.Text = MealName;
                 quantityTxt.Text = quantity.ToString();
             }
@@ -82,11 +84,11 @@ namespace food_Delivery_v_0._0
                 string Fullname = d.GetString(0);
                 string Phone = d.GetString(1);
                 string Address = d.GetString(2);
-                string Gender = d.GetString(3);
+               //string Gender = d.GetString(3);
                 customerFullNametxt.Text = Fullname;
-                phoneTxt.Text = Phone.ToString();
+                phoneTxt.Text = Phone;
                 addressTxt.Text = Address;
-                gendertxt.Text = Gender;
+               // gendertxt.Text = Gender;
             }
             d.Close();
             user.con.Close();
@@ -96,11 +98,17 @@ namespace food_Delivery_v_0._0
 
         private void deliverOrderButton_Click(object sender, EventArgs e)
         {
-            
             user.con.Open();
-            SqlCommand cmd = new SqlCommand("Update Driver set isdriving = 1 where '"+ SignInControl.DriverUsername + "' = 'aa'; ", user.con);
-            user.con.Close();
 
+            SqlDataAdapter sda = new SqlDataAdapter();
+
+            sda.UpdateCommand = new SqlCommand("Update Order_Record set driverUsername = '" + SignInControl.DriverUsername + "' where serial = '" + serial + "'", user.con);
+            sda.UpdateCommand.ExecuteNonQuery();
+
+            sda.UpdateCommand = new SqlCommand("Update Driver set isdriving = 1 where Username = '" + SignInControl.DriverUsername + "' ", user.con);
+            sda.UpdateCommand.ExecuteNonQuery();
+
+            user.con.Close();
         }
     }
 }

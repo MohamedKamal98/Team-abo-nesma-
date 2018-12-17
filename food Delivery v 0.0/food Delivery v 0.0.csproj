@@ -70,11 +70,23 @@
     <Compile Include="Admin_form.Designer.cs">
       <DependentUpon>Admin_form.cs</DependentUpon>
     </Compile>
+    <Compile Include="checker_form.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="checker_form.Designer.cs">
+      <DependentUpon>checker_form.cs</DependentUpon>
+    </Compile>
     <Compile Include="checker_requests.cs">
       <SubType>UserControl</SubType>
     </Compile>
     <Compile Include="checker_requests.Designer.cs">
       <DependentUpon>checker_requests.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Cook_Requests.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Cook_Requests.Designer.cs">
+      <DependentUpon>Cook_Requests.cs</DependentUpon>
     </Compile>
     <Compile Include="DeleteMealForm.cs">
       <SubType>Form</SubType>
@@ -118,11 +130,11 @@
     <Compile Include="fire.Designer.cs">
       <DependentUpon>fire.cs</DependentUpon>
     </Compile>
-    <Compile Include="checker_form.cs">
-      <SubType>Form</SubType>
+    <Compile Include="Meal_Details_for_checker.cs">
+      <SubType>UserControl</SubType>
     </Compile>
-    <Compile Include="checker_form.Designer.cs">
-      <DependentUpon>checker_form.cs</DependentUpon>
+    <Compile Include="Meal_Details_for_checker.Designer.cs">
+      <DependentUpon>Meal_Details_for_checker.cs</DependentUpon>
     </Compile>
     <Compile Include="recordd.cs" />
     <Compile Include="User Controls\AdminRequestToChecker.cs">
@@ -203,8 +215,14 @@
     <EmbeddedResource Include="Admin_form.resx">
       <DependentUpon>Admin_form.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="checker_form.resx">
+      <DependentUpon>checker_form.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="checker_requests.resx">
       <DependentUpon>checker_requests.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Cook_Requests.resx">
+      <DependentUpon>Cook_Requests.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="DeleteMealForm.resx">
       <DependentUpon>DeleteMealForm.cs</DependentUpon>
@@ -227,8 +245,8 @@
     <EmbeddedResource Include="fire.resx">
       <DependentUpon>fire.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="checker_form.resx">
-      <DependentUpon>checker_form.cs</DependentUpon>
+    <EmbeddedResource Include="Meal_Details_for_checker.resx">
+      <DependentUpon>Meal_Details_for_checker.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="User Controls\AdminRequestToChecker.resx">
       <DependentUpon>AdminRequestToChecker.cs</DependentUpon>

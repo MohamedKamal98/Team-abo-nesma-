@@ -30,27 +30,20 @@
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(driverForm));
             this.Header = new System.Windows.Forms.Panel();
-            this.customImageButton1 = new food_Delivery_v_0._0.CustomImageButton();
             this.label2 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
-            this.customImageButton2 = new food_Delivery_v_0._0.CustomImageButton();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.ordersCombobox = new System.Windows.Forms.ComboBox();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.quantityTxt = new System.Windows.Forms.TextBox();
-            this.orderDetailsTxt = new System.Windows.Forms.TextBox();
             this.mealNameTxt = new System.Windows.Forms.TextBox();
             this.cookTxt = new System.Windows.Forms.TextBox();
             this.customerTxt = new System.Windows.Forms.TextBox();
-            this.orderDetailsLabel = new System.Windows.Forms.Label();
             this.quantityLabel = new System.Windows.Forms.Label();
             this.mealNameLabel = new System.Windows.Forms.Label();
             this.cookLabel = new System.Windows.Forms.Label();
             this.customerLabel = new System.Windows.Forms.Label();
             this.deliverOrderButton = new System.Windows.Forms.Button();
-            this.footerBottom = new GradientPanelDemo.GradientPanel();
-            this.TopHeader = new GradientPanelDemo.GradientPanel();
-            this.elipseControl1 = new ElipseToolDemo.ElipseControl();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
             this.addressTxt = new System.Windows.Forms.TextBox();
             this.phoneTxt = new System.Windows.Forms.TextBox();
@@ -60,12 +53,17 @@
             this.label5 = new System.Windows.Forms.Label();
             this.label6 = new System.Windows.Forms.Label();
             this.label7 = new System.Windows.Forms.Label();
+            this.customImageButton1 = new food_Delivery_v_0._0.CustomImageButton();
+            this.customImageButton2 = new food_Delivery_v_0._0.CustomImageButton();
+            this.footerBottom = new GradientPanelDemo.GradientPanel();
+            this.TopHeader = new GradientPanelDemo.GradientPanel();
+            this.elipseControl1 = new ElipseToolDemo.ElipseControl();
             this.Header.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.customImageButton1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.customImageButton2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.groupBox1.SuspendLayout();
             this.groupBox2.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.customImageButton1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.customImageButton2)).BeginInit();
             this.SuspendLayout();
             // 
             // Header
@@ -80,20 +78,6 @@
             this.Header.Name = "Header";
             this.Header.Size = new System.Drawing.Size(878, 98);
             this.Header.TabIndex = 8;
-            // 
-            // customImageButton1
-            // 
-            this.customImageButton1.BackColor = System.Drawing.Color.Transparent;
-            this.customImageButton1.Image = global::food_Delivery_v_0._0.Properties.Resources.Logout_512;
-            this.customImageButton1.ImageHover = global::food_Delivery_v_0._0.Properties.Resources.download;
-            this.customImageButton1.ImageNormal = global::food_Delivery_v_0._0.Properties.Resources.Logout_512;
-            this.customImageButton1.Location = new System.Drawing.Point(666, 11);
-            this.customImageButton1.Name = "customImageButton1";
-            this.customImageButton1.Size = new System.Drawing.Size(65, 57);
-            this.customImageButton1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.customImageButton1.TabIndex = 14;
-            this.customImageButton1.TabStop = false;
-            this.customImageButton1.Click += new System.EventHandler(this.customImageButton1_Click);
             // 
             // label2
             // 
@@ -116,20 +100,6 @@
             this.label3.Size = new System.Drawing.Size(35, 20);
             this.label3.TabIndex = 11;
             this.label3.Text = "Exit";
-            // 
-            // customImageButton2
-            // 
-            this.customImageButton2.BackColor = System.Drawing.Color.Transparent;
-            this.customImageButton2.Image = ((System.Drawing.Image)(resources.GetObject("customImageButton2.Image")));
-            this.customImageButton2.ImageHover = ((System.Drawing.Image)(resources.GetObject("customImageButton2.ImageHover")));
-            this.customImageButton2.ImageNormal = ((System.Drawing.Image)(resources.GetObject("customImageButton2.ImageNormal")));
-            this.customImageButton2.Location = new System.Drawing.Point(759, 11);
-            this.customImageButton2.Name = "customImageButton2";
-            this.customImageButton2.Size = new System.Drawing.Size(65, 57);
-            this.customImageButton2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.customImageButton2.TabIndex = 10;
-            this.customImageButton2.TabStop = false;
-            this.customImageButton2.Click += new System.EventHandler(this.customImageButton2_Click);
             // 
             // pictureBox1
             // 
@@ -158,35 +128,26 @@
             // 
             this.groupBox1.BackColor = System.Drawing.SystemColors.Control;
             this.groupBox1.Controls.Add(this.quantityTxt);
-            this.groupBox1.Controls.Add(this.orderDetailsTxt);
             this.groupBox1.Controls.Add(this.mealNameTxt);
             this.groupBox1.Controls.Add(this.cookTxt);
             this.groupBox1.Controls.Add(this.customerTxt);
-            this.groupBox1.Controls.Add(this.orderDetailsLabel);
             this.groupBox1.Controls.Add(this.quantityLabel);
             this.groupBox1.Controls.Add(this.mealNameLabel);
             this.groupBox1.Controls.Add(this.cookLabel);
             this.groupBox1.Controls.Add(this.customerLabel);
             this.groupBox1.Location = new System.Drawing.Point(40, 201);
             this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(368, 206);
+            this.groupBox1.Size = new System.Drawing.Size(368, 177);
             this.groupBox1.TabIndex = 10;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Order Details";
             // 
             // quantityTxt
             // 
-            this.quantityTxt.Location = new System.Drawing.Point(139, 164);
+            this.quantityTxt.Location = new System.Drawing.Point(139, 126);
             this.quantityTxt.Name = "quantityTxt";
             this.quantityTxt.Size = new System.Drawing.Size(213, 20);
             this.quantityTxt.TabIndex = 9;
-            // 
-            // orderDetailsTxt
-            // 
-            this.orderDetailsTxt.Location = new System.Drawing.Point(139, 128);
-            this.orderDetailsTxt.Name = "orderDetailsTxt";
-            this.orderDetailsTxt.Size = new System.Drawing.Size(213, 20);
-            this.orderDetailsTxt.TabIndex = 8;
             // 
             // mealNameTxt
             // 
@@ -209,21 +170,11 @@
             this.customerTxt.Size = new System.Drawing.Size(213, 20);
             this.customerTxt.TabIndex = 5;
             // 
-            // orderDetailsLabel
-            // 
-            this.orderDetailsLabel.AutoSize = true;
-            this.orderDetailsLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.orderDetailsLabel.Location = new System.Drawing.Point(6, 128);
-            this.orderDetailsLabel.Name = "orderDetailsLabel";
-            this.orderDetailsLabel.Size = new System.Drawing.Size(119, 24);
-            this.orderDetailsLabel.TabIndex = 4;
-            this.orderDetailsLabel.Text = "Order Details";
-            // 
             // quantityLabel
             // 
             this.quantityLabel.AutoSize = true;
             this.quantityLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.quantityLabel.Location = new System.Drawing.Point(6, 164);
+            this.quantityLabel.Location = new System.Drawing.Point(6, 121);
             this.quantityLabel.Name = "quantityLabel";
             this.quantityLabel.Size = new System.Drawing.Size(83, 24);
             this.quantityLabel.TabIndex = 3;
@@ -261,36 +212,13 @@
             // 
             // deliverOrderButton
             // 
-            this.deliverOrderButton.Location = new System.Drawing.Point(304, 429);
+            this.deliverOrderButton.Location = new System.Drawing.Point(353, 472);
             this.deliverOrderButton.Name = "deliverOrderButton";
             this.deliverOrderButton.Size = new System.Drawing.Size(169, 51);
             this.deliverOrderButton.TabIndex = 11;
             this.deliverOrderButton.Text = "Deliver Order";
             this.deliverOrderButton.UseVisualStyleBackColor = true;
             this.deliverOrderButton.Click += new System.EventHandler(this.deliverOrderButton_Click);
-            // 
-            // footerBottom
-            // 
-            this.footerBottom.ColorBottom = System.Drawing.Color.Chocolate;
-            this.footerBottom.ColorTop = System.Drawing.Color.SaddleBrown;
-            this.footerBottom.Location = new System.Drawing.Point(12, 583);
-            this.footerBottom.Name = "footerBottom";
-            this.footerBottom.Size = new System.Drawing.Size(891, 26);
-            this.footerBottom.TabIndex = 7;
-            // 
-            // TopHeader
-            // 
-            this.TopHeader.ColorBottom = System.Drawing.Color.Chocolate;
-            this.TopHeader.ColorTop = System.Drawing.Color.SaddleBrown;
-            this.TopHeader.Location = new System.Drawing.Point(0, 0);
-            this.TopHeader.Name = "TopHeader";
-            this.TopHeader.Size = new System.Drawing.Size(961, 21);
-            this.TopHeader.TabIndex = 6;
-            // 
-            // elipseControl1
-            // 
-            this.elipseControl1.CornerRadius = 100;
-            this.elipseControl1.TargetControl = this;
             // 
             // groupBox2
             // 
@@ -303,9 +231,9 @@
             this.groupBox2.Controls.Add(this.label5);
             this.groupBox2.Controls.Add(this.label6);
             this.groupBox2.Controls.Add(this.label7);
-            this.groupBox2.Location = new System.Drawing.Point(474, 226);
+            this.groupBox2.Location = new System.Drawing.Point(474, 201);
             this.groupBox2.Name = "groupBox2";
-            this.groupBox2.Size = new System.Drawing.Size(368, 167);
+            this.groupBox2.Size = new System.Drawing.Size(368, 177);
             this.groupBox2.TabIndex = 11;
             this.groupBox2.TabStop = false;
             this.groupBox2.Text = "Customer Details";
@@ -378,6 +306,57 @@
             this.label7.TabIndex = 0;
             this.label7.Text = "Name:";
             // 
+            // customImageButton1
+            // 
+            this.customImageButton1.BackColor = System.Drawing.Color.Transparent;
+            this.customImageButton1.Image = global::food_Delivery_v_0._0.Properties.Resources.Logout_512;
+            this.customImageButton1.ImageHover = global::food_Delivery_v_0._0.Properties.Resources.download;
+            this.customImageButton1.ImageNormal = global::food_Delivery_v_0._0.Properties.Resources.Logout_512;
+            this.customImageButton1.Location = new System.Drawing.Point(666, 11);
+            this.customImageButton1.Name = "customImageButton1";
+            this.customImageButton1.Size = new System.Drawing.Size(65, 57);
+            this.customImageButton1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.customImageButton1.TabIndex = 14;
+            this.customImageButton1.TabStop = false;
+            this.customImageButton1.Click += new System.EventHandler(this.customImageButton1_Click);
+            // 
+            // customImageButton2
+            // 
+            this.customImageButton2.BackColor = System.Drawing.Color.Transparent;
+            this.customImageButton2.Image = ((System.Drawing.Image)(resources.GetObject("customImageButton2.Image")));
+            this.customImageButton2.ImageHover = ((System.Drawing.Image)(resources.GetObject("customImageButton2.ImageHover")));
+            this.customImageButton2.ImageNormal = ((System.Drawing.Image)(resources.GetObject("customImageButton2.ImageNormal")));
+            this.customImageButton2.Location = new System.Drawing.Point(759, 11);
+            this.customImageButton2.Name = "customImageButton2";
+            this.customImageButton2.Size = new System.Drawing.Size(65, 57);
+            this.customImageButton2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.customImageButton2.TabIndex = 10;
+            this.customImageButton2.TabStop = false;
+            this.customImageButton2.Click += new System.EventHandler(this.customImageButton2_Click);
+            // 
+            // footerBottom
+            // 
+            this.footerBottom.ColorBottom = System.Drawing.Color.Chocolate;
+            this.footerBottom.ColorTop = System.Drawing.Color.SaddleBrown;
+            this.footerBottom.Location = new System.Drawing.Point(12, 583);
+            this.footerBottom.Name = "footerBottom";
+            this.footerBottom.Size = new System.Drawing.Size(891, 26);
+            this.footerBottom.TabIndex = 7;
+            // 
+            // TopHeader
+            // 
+            this.TopHeader.ColorBottom = System.Drawing.Color.Chocolate;
+            this.TopHeader.ColorTop = System.Drawing.Color.SaddleBrown;
+            this.TopHeader.Location = new System.Drawing.Point(0, 0);
+            this.TopHeader.Name = "TopHeader";
+            this.TopHeader.Size = new System.Drawing.Size(961, 21);
+            this.TopHeader.TabIndex = 6;
+            // 
+            // elipseControl1
+            // 
+            this.elipseControl1.CornerRadius = 100;
+            this.elipseControl1.TargetControl = this;
+            // 
             // driverForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -398,13 +377,13 @@
             this.Text = "CookForm";
             this.Header.ResumeLayout(false);
             this.Header.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.customImageButton1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.customImageButton2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
             this.groupBox2.ResumeLayout(false);
             this.groupBox2.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.customImageButton1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.customImageButton2)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -424,11 +403,9 @@
         private System.Windows.Forms.GroupBox groupBox1;
         private System.Windows.Forms.Label customerLabel;
         private System.Windows.Forms.TextBox quantityTxt;
-        private System.Windows.Forms.TextBox orderDetailsTxt;
         private System.Windows.Forms.TextBox mealNameTxt;
         private System.Windows.Forms.TextBox cookTxt;
         private System.Windows.Forms.TextBox customerTxt;
-        private System.Windows.Forms.Label orderDetailsLabel;
         private System.Windows.Forms.Label quantityLabel;
         private System.Windows.Forms.Label mealNameLabel;
         private System.Windows.Forms.Label cookLabel;

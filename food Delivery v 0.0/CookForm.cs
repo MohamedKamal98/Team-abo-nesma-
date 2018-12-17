@@ -16,6 +16,7 @@ namespace food_Delivery_v_0._0
         {
             InitializeComponent();
             cook_Menu1.Hide();
+            cook_Requests1.Hide();
         }
 
         private void customImageButton1_Click(object sender, EventArgs e)
@@ -44,6 +45,11 @@ namespace food_Delivery_v_0._0
         private void BackBt2_Click(object sender, EventArgs e)
         {
             cook_Menu1.Hide();
+        }
+
+        private void ShowReq_bt_Click(object sender, EventArgs e)
+        {
+            cook_Requests1.Show();
         }
     }
 }

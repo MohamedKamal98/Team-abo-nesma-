@@ -34,12 +34,15 @@
             this.label1 = new System.Windows.Forms.Label();
             this.notification_lbl = new System.Windows.Forms.Label();
             this.requests_layout_panl = new System.Windows.Forms.FlowLayoutPanel();
+            this.meal_Details_for_checker1 = new food_Delivery_v_0._0.Meal_Details_for_checker();
             this.customImageButton3 = new food_Delivery_v_0._0.CustomImageButton();
             this.customImageButton1 = new food_Delivery_v_0._0.CustomImageButton();
             this.customImageButton2 = new food_Delivery_v_0._0.CustomImageButton();
+            this.Checked_btn = new food_Delivery_v_0._0.CustomImageButton();
             ((System.ComponentModel.ISupportInitialize)(this.customImageButton3)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.customImageButton1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.customImageButton2)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.Checked_btn)).BeginInit();
             this.SuspendLayout();
             // 
             // label2
@@ -95,6 +98,13 @@
             this.requests_layout_panl.Size = new System.Drawing.Size(125, 213);
             this.requests_layout_panl.TabIndex = 23;
             // 
+            // meal_Details_for_checker1
+            // 
+            this.meal_Details_for_checker1.Location = new System.Drawing.Point(272, 97);
+            this.meal_Details_for_checker1.Name = "meal_Details_for_checker1";
+            this.meal_Details_for_checker1.Size = new System.Drawing.Size(276, 266);
+            this.meal_Details_for_checker1.TabIndex = 24;
+            // 
             // customImageButton3
             // 
             this.customImageButton3.BackColor = System.Drawing.Color.Maroon;
@@ -136,11 +146,25 @@
             this.customImageButton2.TabStop = false;
             this.customImageButton2.Click += new System.EventHandler(this.customImageButton2_Click);
             // 
+            // Checked_btn
+            // 
+            this.Checked_btn.BackColor = System.Drawing.Color.DarkOliveGreen;
+            this.Checked_btn.ImageHover = null;
+            this.Checked_btn.ImageNormal = null;
+            this.Checked_btn.Location = new System.Drawing.Point(593, 295);
+            this.Checked_btn.Name = "Checked_btn";
+            this.Checked_btn.Size = new System.Drawing.Size(112, 58);
+            this.Checked_btn.TabIndex = 25;
+            this.Checked_btn.TabStop = false;
+            this.Checked_btn.Click += new System.EventHandler(this.Checked_btn_Click);
+            // 
             // checker_form
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(771, 388);
+            this.Controls.Add(this.Checked_btn);
+            this.Controls.Add(this.meal_Details_for_checker1);
             this.Controls.Add(this.requests_layout_panl);
             this.Controls.Add(this.notification_lbl);
             this.Controls.Add(this.label1);
@@ -150,10 +174,11 @@
             this.Controls.Add(this.label3);
             this.Controls.Add(this.customImageButton2);
             this.Name = "checker_form";
-            this.Text = "Checker";
+            this.Text = "F";
             ((System.ComponentModel.ISupportInitialize)(this.customImageButton3)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.customImageButton1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.customImageButton2)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.Checked_btn)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -169,5 +194,7 @@
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label notification_lbl;
         private System.Windows.Forms.FlowLayoutPanel requests_layout_panl;
+        public Meal_Details_for_checker meal_Details_for_checker1;
+        private CustomImageButton Checked_btn;
     }
 }

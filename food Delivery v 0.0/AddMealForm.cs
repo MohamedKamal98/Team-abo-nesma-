@@ -27,7 +27,7 @@ namespace food_Delivery_v_0._0
 
         private void Add_bt_Click(object sender, EventArgs e)
         {
-            user.cmd = new System.Data.SqlClient.SqlCommand("insert into Menu(meal_ID,MealName,price,CookUsername,Meal_Details) values('"+ MealID_txt.Text + "','" + MealName_txt.Text + "','" + MealPrice_txt.Text + "','" + CookUsername_txt.Text + "','"+MealDetails_txt.Text+"')", user.con);
+            user.cmd = new System.Data.SqlClient.SqlCommand("insert into Menu(meal_ID,MealName,price,CookUsername,Meal_Details,rate) values('"+ MealID_txt.Text + "','" + MealName_txt.Text + "','" + MealPrice_txt.Text + "','" + CookUsername_txt.Text + "','"+MealDetails_txt.Text+"',0)", user.con);
             user.con.Open();
             user.cmd.ExecuteNonQuery();
             user.con.Close();

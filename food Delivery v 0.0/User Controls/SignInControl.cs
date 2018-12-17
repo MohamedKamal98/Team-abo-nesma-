@@ -60,9 +60,10 @@ namespace food_Delivery_v_0._0
                             }
                             else if (sqlTable == "Driver")
                             {
-                                DriverUsername = usernametxt.Text; 
+                                DriverUsername = usernametxt.Text;
                                 driverForm df = new driverForm();
                                 df.Show();
+                                
                                 //the driver's options goes here
                             }
                             else if (sqlTable == "Cooks")
